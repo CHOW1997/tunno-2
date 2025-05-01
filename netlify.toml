@@ -1,6 +1,6 @@
 [build]
   command = "npm install && npm run build"
-  publish = "svelte-kit build"
+  publish = "build"
   [build.caching]
     enabled = true
     paths = ["node_modules/.cache", "public/build"]
