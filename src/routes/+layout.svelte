@@ -65,7 +65,7 @@
 	{/if}
 </div>
 
-<style>
+<style post="css">
 	.app {
 		display: flex;
 		flex-direction: column;
