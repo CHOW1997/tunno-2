@@ -7,4 +7,4 @@ export const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_K
         autoRefreshToken: true, // 自动刷新令牌
         detectSessionInUrl: true // 检测URL中的会话信息
     }
-})
+}) 

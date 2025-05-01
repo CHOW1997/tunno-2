@@ -17,7 +17,13 @@ const config = {
         },
         paths: {
             base: ""
-        }
+        },
+        vite: {
+            build: {
+              sourcemap: true // 方便调试和 Vite PWA 插件生成
+            }
+          }
+        
     },
     preprocess: vitePreprocess()
 };

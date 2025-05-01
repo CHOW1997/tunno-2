@@ -1,10 +1,17 @@
 [build]
   command = "npm install && npm run build"
   publish = "build"
-  [build.caching]
-    enabled = true
-    paths = ["node_modules/.cache", "public/build"]
+
+[build.caching]
+  enabled = true
+  paths = ["node_modules/.cache", ".svelte-kit"]
 
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
+
+[functions]
+  node_bundler = "esbuild"
+
+[edge_functions]
+  included_files = ["static/_redirects"]
