@@ -5,8 +5,10 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   kit: {
     adapter: adapter({
+      split: true,
       edge: false,
-      split: true
+      external: [],
+      fallback: null,
     }),
     prerender: {
       handleHttpError: ({ message }) => {
