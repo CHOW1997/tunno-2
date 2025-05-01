@@ -1,18 +1,13 @@
 [build]
   command = "npm install && npm run build"
   publish = "build"
-
-[build.caching]
-  enabled = true
-  paths = ["node_modules/.cache", ".svelte-kit"]
+  [build.caching]
+    enabled = true
+    paths = ["node_modules/.cache", "public/build"]
 
 [build.environment]
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
 
-[functions]
+  [functions]
   node_bundler = "esbuild"
-
-[[edge_functions]]
-path = "/auth/callback"
-function = "auth-callback"
