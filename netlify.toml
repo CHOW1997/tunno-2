@@ -13,5 +13,6 @@
 [functions]
   node_bundler = "esbuild"
 
-[edge_functions]
-  included_files = ["static/_redirects"]
+[[edge_functions]]
+path = "/auth/callback"
+function = "auth-callback"
