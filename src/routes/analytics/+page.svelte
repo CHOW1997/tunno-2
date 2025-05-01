@@ -380,28 +380,7 @@ currentDate.setHours(0, 0, 0, 0); // 重置时间为当天的开始
     
     <!-- Category selection -->
     
-    {#if selectedPeriod === 'month' || selectedPeriod === 'year'}
-        <div class="text-center w-auto flex text-xl font-semibold mb-4 justify-center">
-            <button 
-            class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
-            on:click={() => { currentMonthOffset -= 1; }}
-            >
-            &lt;
-            </button>
-            <p class=" font-black text-2xl content-center px-3">
-                {selectedPeriod === 'month' 
-                    ? new Date(new Date().setMonth(new Date().getMonth() + currentMonthOffset)).toLocaleString('default', { month: 'long', year: 'numeric' })
-                    : new Date(new Date().setFullYear(new Date().getFullYear() + currentMonthOffset)).getFullYear()}
-            </p>
-            <button 
-            class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
-            on:click={() => { currentMonthOffset += 1; }}
-            >
-            &gt;
-            </button>
-        </div>
-    {/if}
-            
+
     <!-- Time range selection -->
     <div class="flex gap-2 justify-evenly">
 
@@ -432,13 +411,37 @@ currentDate.setHours(0, 0, 0, 0); // 重置时间为当天的开始
         
     </div>
 
-    
+    <!-- Chart type toggle button -->
+    <div class="flex justify-end">
+        
+    </div>
 
     <!-- Statistics cards -->
     <div class="bg-white rounded-lg shadow">
         <div class="p-4 border-b flex justify-between items-center ">
             <h3 class="text-lg font-semibold">Monthly Statistics</h3>
             
+            {#if selectedPeriod === 'month' || selectedPeriod === 'year'}
+                <div class="text-center flex text-xl font-semibold mb-4">
+                    <button 
+                    class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+                    on:click={() => { currentMonthOffset -= 1; }}
+                    >
+                    &lt;
+                    </button>
+                    <h2 class="text-xl font-bold content-center px-3">
+                        {selectedPeriod === 'month' 
+                            ? new Date(new Date().setMonth(new Date().getMonth() + currentMonthOffset)).toLocaleString('default', { month: 'long', year: 'numeric' })
+                            : new Date(new Date().setFullYear(new Date().getFullYear() + currentMonthOffset)).getFullYear()}
+                    </h2>
+                    <button 
+                    class="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+                    on:click={() => { currentMonthOffset += 1; }}
+                    >
+                    &gt;
+                    </button>
+                </div>
+            {/if}
             
             <button 
             class="px-4 py-2 rounded-lg bg-[#ff4400] text-white"

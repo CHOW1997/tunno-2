@@ -1,0 +1,18 @@
+/* /index.html 200
+
+/ /.netlify/functions/sveltekit-index 200
+/__data.json /.netlify/functions/sveltekit-index 200
+/about /.netlify/functions/sveltekit-about 200
+/about/__data.json /.netlify/functions/sveltekit-about 200
+/analytics /.netlify/functions/sveltekit-analytics 200
+/analytics/__data.json /.netlify/functions/sveltekit-analytics 200
+/auth/callback /.netlify/functions/sveltekit-auth-callback 200
+/auth/callback/__data.json /.netlify/functions/sveltekit-auth-callback 200
+/expenses /.netlify/functions/sveltekit-expenses 200
+/expenses/__data.json /.netlify/functions/sveltekit-expenses 200
+/login /.netlify/functions/sveltekit-login 200
+/login/__data.json /.netlify/functions/sveltekit-login 200
+/settings /.netlify/functions/sveltekit-settings 200
+/settings/__data.json /.netlify/functions/sveltekit-settings 200
+/tasks /.netlify/functions/sveltekit-tasks 200
+/tasks/__data.json /.netlify/functions/sveltekit-tasks 200

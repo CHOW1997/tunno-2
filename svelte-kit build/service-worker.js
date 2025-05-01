@@ -1,0 +1,1 @@
+const e=["/manifest.json","/pwa-192x192.png","/pwa-512x512.png","/favicon.png","/apple-touch-icon.png","/index.html","/"];self.addEventListener("install",c=>{c.waitUntil((async()=>{try{await(await caches.open("app-cache-v1")).addAll(e)}catch(a){console.error("Failed to cache resources:",a)}})())});
