@@ -9,6 +9,7 @@ const config = {
       edge: false,
       external: [],
       fallback: null,
+      generateHeaders: false, 
     }),
     prerender: {
       handleHttpError: ({ message }) => {
